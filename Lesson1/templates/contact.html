@@ -1,0 +1,23 @@
+{%  extends 'index.html' %}
+
+{% block title %}
+Контакты
+{% endblock %}
+
+{% block selected %}
+<li><a href="{{ url_for('index') }}">Главная</a></li>
+<li><a href="{{ url_for('about') }}">О нас</a></li>
+<li><a href="{{ url_for('shop') }}">Магазин</a></li>
+<li class="selected"><a href="{{ url_for('contact') }}">Контакты</a></li>
+{% endblock %}
+
+{% block content %}
+<h2>
+  Наши контакты:
+  <ul> 
+    <li>Тел.: 322-233</li>
+    <li>Адрес: Наш адрес не дом и не улица)</li>
+    <li>E-mail: admin@style.ru</li>
+  </ul>
+<h2p>
+{% endblock %}

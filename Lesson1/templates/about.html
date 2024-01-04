@@ -1,0 +1,22 @@
+{%  extends 'index.html' %}
+
+{% block title %}
+О нас
+{% endblock %}
+
+{% block selected %}
+<li><a href="{{ url_for('index') }}">Главная</a></li>
+<li class="selected"><a href="{{ url_for('about') }}">О нас</a></li>
+<li><a href="{{ url_for('shop') }}">Магазин</a></li>
+<li><a href="{{ url_for('contact') }}">Контакты</a></li>
+{% endblock %}
+
+{% block content %}
+<h1>
+  Магазин "Стиль" - лучший магазин одежды.
+</h1>
+<p>
+  В ассортименте Одежда, обувь и аксессуары.
+</p>
+{% endblock %}
+
