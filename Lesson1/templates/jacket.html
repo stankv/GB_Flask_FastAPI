@@ -1,0 +1,17 @@
+{%  extends 'index.html' %}
+
+{% block title %}
+Куртка
+{% endblock %}
+
+{% block selected %}
+<li><a href="{{ url_for('index') }}">Главная</a></li>
+<li><a href="{{ url_for('about') }}">О нас</a></li>
+<li class="selected"><a href="{{ url_for('shop') }}">Магазин</a></li>
+<li><a href="{{ url_for('contact') }}">Контакты</a></li>
+{% endblock %}
+
+{% block content %}
+<center><h1>Куртка<h1></center>
+<img src="../static/image/kurtka.jpg" alt="Куртка">
+{% endblock %}

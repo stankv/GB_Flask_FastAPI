@@ -1,0 +1,38 @@
+{%  extends 'index.html' %}
+
+{% block title %}
+Куртки
+{% endblock %}
+
+{% block selected %}
+<li><a href="{{ url_for('index') }}">Главная</a></li>
+<li><a href="{{ url_for('about') }}">О нас</a></li>
+<li class="selected"><a href="{{ url_for('shop') }}">Магазин</a></li>
+<li><a href="{{ url_for('contact') }}">Контакты</a></li>
+{% endblock %}
+
+{% block content %}
+<!-- <center><h1>Куртка<h1></center>
+<img src="../static/image/kurtka.jpg" alt="Куртка"> -->
+<h2>Куртки:</h2>
+<table>
+    <tr>
+        <th>Пол</th>
+        <th>Сезон</th>
+        <th>Стиль</th>
+        <th>Размер</th>
+        <th>Бренд</th>
+        <th>Подробнее</th>
+    </tr>
+    {% for jacket in jackets %}
+    <tr>
+        <td>{{ jacket.gender }}</td>
+        <td>{{ jacket.season }}</td>
+        <td>{{ jacket.style }}</td>
+        <td>{{ jacket.size }}</td>
+        <td>{{ jacket.brand }}</td>
+        <td><a href="{{ url_for('jacket') }}">{{ jacket.view }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
