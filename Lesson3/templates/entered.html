@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+    <!-- insert the page content here -->
+    <h1>Личный кабинет</h1>
+    <p>Вход выполнен успешно.</p>
+    <p>Добро пожаловать, {{ username }}!</p>
+    <form action="/logout/" method="post">
+        <input type="submit" value="Выйти">
+    </form>
+
+
+{% endblock content %}
